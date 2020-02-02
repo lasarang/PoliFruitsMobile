@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/DispenserScreen.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'cartmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -127,8 +128,13 @@ class _HomePageState extends State<HomePage> {
 
               ScopedModel.of<CartModel>(context).clearCart();
 
+              //Navigator.pop(context);
 
-              Navigator.pop(context);
+              print('cambiando a los dispensadores');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DispenserScreen()),
+              );
 
             },
           ),
@@ -137,29 +143,30 @@ class _HomePageState extends State<HomePage> {
 
             IconButton(
               icon: Icon(Icons.developer_board),
-              onPressed: () => Navigator.pushNamed(context, '/cart'),
+              onPressed: () =>
+
+                  Navigator.pushNamed(context, '/cart')
+
+              ,
             ),
-
-
-
 
           ],
         ),
         body:
         GridView.builder(
-          padding: EdgeInsets.all(7.0),
+          padding: EdgeInsets.all(8.0),
           itemCount: _products.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 8,
               crossAxisSpacing: 8,
-              childAspectRatio: 1.05),
+              childAspectRatio: 0.9),
           itemBuilder: (context, index) {
             return ScopedModelDescendant<CartModel>(
                 builder: (context, child, model) {
                   return Card(child: Column(children: <Widget>[
                     Image.network(
-                      _products[index].imgUrl, height: 90, width: 90,),
+                      _products[index].imgUrl, height: 120, width: 120,),
                     Text(_products[index].title,
                       style: TextStyle(fontWeight: FontWeight.bold),),
                     Text("Disponible: " + _products[index].qty.toString()),

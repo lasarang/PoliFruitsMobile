@@ -236,7 +236,7 @@ PODS:
   - Flutter (1.0.0)
   - fluttertoast (0.0.2):
     - Flutter
-  - geolocator (5.1.5):
+  - geolocator (5.2.0):
     - Flutter
   - google_api_availability (2.0.2):
     - Flutter
@@ -301,7 +301,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - permission_handler (4.0.0):
+  - "permission_handler (4.2.0+hotfix.2)":
     - Flutter
 
 DEPENDENCIES:
@@ -371,7 +371,7 @@ SPEC CHECKSUMS:
   cloud_firestore: c5d1e4d114eecb1dfb535f008435685bcf6063f1
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   firebase_auth: d99b993c1405096e66c58211b1cd956c23eed1c5
-  firebase_core: 87e4c7cef68de46c0326ce2ee907fc7e365ead7e
+  firebase_core: 9bd2e66a276153e219a87ff39dfecb6b671f524a
   firebase_core_web: d501d8b946b60c8af265428ce483b0fff5ad52d1
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
   FirebaseAuth: 831577b184ecaba38bc886768c1c22a450cc44e3
@@ -383,7 +383,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: ce993a3c3670a8f5d47ce371ac5d143c560608c5
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   fluttertoast: b644586ef3b16f67fae9a1f8754cef6b2d6b634b
-  geolocator: 80aba2bb48f8c7dfc5a8b70b9d13fc3edc8399c4
+  geolocator: cf6ecc0e5beffb31a51aee7ad6e49a49b293df32
   google_api_availability: 6f1017d3a61be12be3bd9f929cc5b2606f24ae7f
   google_maps_flutter: d0dd62f5a7d39bae61057eb9f52dd778d99c7c6c
   GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
@@ -397,7 +397,7 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   location_permissions: 360d12ecd1c94a4cab68585f508be1d5ad944c8b
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  permission_handler: 0fb88b8a3c23e31e5de45b8f1bb8b7de28cf8941
+  permission_handler: de3abfc2aa31a5641a033ac33bc9cd75f4fcb148
 
 PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
 

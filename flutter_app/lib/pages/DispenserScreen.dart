@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/home.dart';
+import 'package:flutter_app/pages/login.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
@@ -346,7 +347,18 @@ class _DispenserScreenState extends State<DispenserScreen> {
             appBar: AppBar(
               title: Text('PoliFruits'),
               backgroundColor: Colors.blue,
+              leading: new IconButton(
+                icon: new Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                  //Navigator.pop(context);
+                },
+              ),
             ),
+
             body:
             Stack(
               children: <Widget>[

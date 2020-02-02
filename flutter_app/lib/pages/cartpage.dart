@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/DispenserScreen.dart';
 import 'package:flutter_app/pages/home.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'cartmodel.dart';
@@ -85,7 +86,9 @@ class _CartPageState extends State<CartPage> {
                 onPressed: () {
                   updateCalificacion(_calificacionController.text);
 
-                 // Navigator.of(context).pop();
+                  //Navigator.of(context).pop();
+                 // Navigator.pop(context);
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => HomePage()),
@@ -122,6 +125,7 @@ class _CartPageState extends State<CartPage> {
                   rebuildOnChange: true)
                   .updateFruits();
               ScopedModel.of<CartModel>(context).clearCart();
+
               showRateWindow();
 
             })
@@ -140,6 +144,25 @@ class _CartPageState extends State<CartPage> {
           appBar: AppBar(
             backgroundColor: Colors.blue,
             title: Text("Canasta"),
+
+            leading: new IconButton(
+              icon: new Icon(Icons.arrow_back),
+              onPressed: () {
+
+
+               // Navigator.pop(context);
+
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+
+
+
+              },
+            ),
+
             actions: <Widget>[
               FlatButton(
                   child: Text(
